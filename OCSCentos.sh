@@ -22,7 +22,7 @@ yum -y update && yum -y install curl
 MYIP=$(curl -4 icanhazip.com)
 
 # go to root
-cd
+
 
 #Start Installing
 clear
@@ -31,10 +31,10 @@ echo ""
 echo ""
 echo "Configure Database OCS Panel Name"
 echo "(Make sure the database name contains no spaces, symbols, or special characters.)"
-read -p "Database Name    : " -e -i OCSShigeno NamaDatabase
+read -p "Database Name    : " -e -i OcsKoroiVPN NamaDatabase
 echo "Input MySQL Password:"
 echo "(Use different Password for your database, dont use VPS password.)"
-read -p "Database Password: " -e -i shigeno PasswordDatabase
+read -p "Database Password: " -e -i koroivpn PasswordDatabase
 echo ""
 echo "All questions have been answered."
 read -n1 -r -p "Press any key to continue ..."
@@ -47,10 +47,10 @@ rpm -Uvh epel-release-6-8.noarch.rpm
 rpm -Uvh remi-release-6.rpm
 
 if [ "$OS" == "x86_64" ]; then
-  wget https://raw.githubusercontent.com/shigeno143/OCSPanelCentos6/master/rpmforge-release-0.5.3-1.el6.rf.x86_64.rpm
+  wget https://raw.githubusercontent.com/aliepmoses/OCSPanelCentos6/master/rpmforge-release-0.5.3-1.el6.rf.x86_64.rpm
   rpm -Uvh rpmforge-release-0.5.3-1.el6.rf.x86_64.rpm
 else
-  wget https://raw.githubusercontent.com/shigeno143/OCSPanelCentos6/master/rpmforge-release-0.5.3-1.el6.rf.i686.rpm
+  wget https://raw.githubusercontent.com/aliepmoses/OCSPanelCentos6/master/rpmforge-release-0.5.3-1.el6.rf.i686.rpm
   rpm -Uvh rpmforge-release-0.5.3-1.el6.rf.i686.rpm
 fi
 
@@ -126,7 +126,7 @@ service nginx restart
 #Install zip shigeno Script
 yum -y install zip unzip
 cd /home/vps/public_html
-wget https://raw.githubusercontent.com/shigeno143/OCSPanelCentos6/master/OCSPanelCentos6.zip
+wget https://raw.githubusercontent.com/aliepmoses/OCSPanelCentos6/master/OCSPanelCentos6.zip
 unzip OCSPanelCentos6.zip
 rm -f OCSPanelCentos6.zip
 chown -R nginx:nginx /home/vps/public_html
@@ -183,7 +183,7 @@ echo "Installatin Log: /root/log-install-ocspanel.txt" 				| tee -a log-install-
 echo "--------------------------------------------------------------------------------"| tee -a log-install-ocspanel.txt
 echo "Copyright https://www.HostingTermurah.net"  						| tee -a log-install-ocspanel.txt
 echo "Script Created By Steven Indarto(fb.com/stevenindarto2)"   		| tee -a log-install-ocspanel.txt
-echo "Modified by shigeno"                      	                 	| tee -a log-install-ocspanel.txt
+echo "Modified by Koroi"                      	                 	| tee -a log-install-ocspanel.txt
 echo "--------------------------------------------------------------------------------"| tee -a log-install-ocspanel.txt
 echo ""
 echo ""
