@@ -126,9 +126,9 @@ service nginx restart
 #Install zip shigeno Script
 yum -y install zip unzip
 cd /home/vps/public_html
-wget https://raw.githubusercontent.com/aliepmoses/OCSPanelCentos6/master/OCSPanelCentos6.zip
-unzip OCSPanelCentos6.zip
-rm -f OCSPanelCentos6.zip
+wget https://github.com/ZENON-VPN/ocs-panel/blob/master/OCS.zip?raw=true
+unzip OCS.zip
+rm -f OCS.zip
 chown -R nginx:nginx /home/vps/public_html
 chmod -R +rw /home/vps/public_html
 chmod 777 /home/vps/public_html/config
